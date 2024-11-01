@@ -1,0 +1,160 @@
+/* Base styling */
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/Users/sivanesanbalu/Desktop/gemini_project/frist-gen/public/img01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+/* App container */
+.app {
+  width: 90vw;
+  max-width: 700px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Chat prompt section */
+p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Surprise button */
+.surprise {
+  background-color: #4A90E2;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.surprise:hover {
+  background-color: #357ABD;
+}
+
+/* Input container for typing message */
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #333;
+}
+
+.input-container input::placeholder {
+  color: #aaa;
+}
+
+/* Ask Me and Clear buttons */
+.input-container button {
+  width: 80px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.input-container button:first-of-type {
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+}
+.input-container button:first-of-type:hover {
+  background-color: #45A049;
+}
+.input-container button:last-of-type {
+  background-color: #f44336; /* Red */
+  color: #fff;
+}
+.input-container button:last-of-type:hover {
+  background-color: #e53935;
+}
+
+/* Chat history styling */
+.search-result {
+  margin-top: 15px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+.answer:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.answer.user {
+  background-color: #ffe0e0;
+  border-left: 5px solid #ff7b7b;
+}
+.answer.model {
+  background-color: #e6f7ff;
+  border-left: 5px solid #4A90E2;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  .app {
+    width: 95vw;
+    height: 90vh;
+  }
+  .input-container button {
+    font-size: 14px;
+  }
+  .answer {
+    font-size: 14px;
+  }
+}
